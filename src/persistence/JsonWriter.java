@@ -1,6 +1,6 @@
 package persistence;
 /*
-import model.Portfolio;
+import model.Application;
 import org.json.JSONObject;
 
 import java.io.File;
@@ -26,9 +26,9 @@ public class JsonWriter {
 
     // MODIFIES: this
     // EFFECTS: writes JSON representation of portfolio to file
-    public void write(Portfolio p) {
-        System.out.println(p);
-        JSONObject json = p.toJson();
+    public void write(Application a) {
+        System.out.println(a);
+        JSONObject json = a.toJson();
         saveToFile(json.toString(TAB));
     }
 
@@ -46,3 +46,5 @@ public class JsonWriter {
 }
 
  */
+
+

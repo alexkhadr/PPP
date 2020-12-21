@@ -5,7 +5,7 @@ import model.Application;
 
 import javax.swing.*;
 import java.util.ArrayList;
-//import persistence.JsonReader;  //Todo add persistencee
+//import persistence.JsonReader;  //Todo add persistence
 //import persistence.JsonWriter;
 
 public class Main {
@@ -23,7 +23,7 @@ public class Main {
 
         JFrame frame = new JFrame();
         frame.setVisible(true);
-        frame.setSize(500, 500);
+        frame.setSize(1500, 1500);
 
 
     }

@@ -30,7 +30,7 @@ public class Application {
 
     //MODIFIES: this
     //EFFECTS: adds an internship to a student's application list
-    public void addApplication(Student s, Internship i) throws DuplicateException {
+    public void addInternship(Student s, Internship i) throws DuplicateException {
         if (applications.containsKey(s) && !applications.get(s).contains(i)) {
             applications.get(s).add(i);
         } else if (!applications.containsKey(s)) {

@@ -1,9 +1,19 @@
 package persistence;
 
 /*
-import model.Portfolio;
+import exception.DuplicateException;
+import model.Application;
+import model.Internship;
+import model.Student;
 import org.json.JSONArray;
 import org.json.JSONObject;
+
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.stream.Stream;
 
 
 public class JsonReader {
@@ -18,7 +28,7 @@ public class JsonReader {
 
     // EFFECTS: reads portfolio from file and returns it;
     // throws IOException if an error occurs reading data from file
-    public Portfolio read() throws IOException {
+    public Application read() throws IOException, DuplicateException {
         String jsonData = readFile(source);
         JSONObject jsonObject = new JSONObject(jsonData);
         return parseMyPortfolio(jsonObject);
@@ -36,33 +46,34 @@ public class JsonReader {
     }
 
     // EFFECTS: parses myPortfolio from JSON object and returns it
-    public Portfolio parseMyPortfolio(JSONObject jsonObject) throws IOException {
-        //JSONObject jsonObject1 = new JSONObject(jsonData);
+    public Application parseMyPortfolio(JSONObject jsonObject) throws IOException, DuplicateException {
         String name = jsonObject.getString("name");
         double balance = jsonObject.getDouble("balance");
-        Portfolio p = new Portfolio(new ArrayList<Internship>());
-        Internship i = new Internship("ETF",0.3, 0);
-        addMultipleInternships(p, i, jsonObject);
-        return p;
+        Application a = new Application();
+        //Internship i = new Internship();
+        addMultipleInternships(a, jsonObject);
+        return a;
     }
 
     // MODIFIES: mp
     // EFFECTS: parses addMultipleBonds from JSON object and adds them to MyPortfolio
-    private void addMultipleInternships(Portfolio p, Internship i, JSONObject jsonObject) {
+    private void addMultipleInternships(Application a, JSONObject jsonObject) throws DuplicateException {
         JSONArray jsonArray = jsonObject.getJSONArray("thingies");
         for (Object json : jsonArray) {
-            JSONObject nextBond = (JSONObject) json;
-            addBondToList(p, i, nextBond);
+            JSONObject nextInternship = (JSONObject) json;
+            addInternshipToList(a, nextInternship);
         }
     }
 
-    // MODIFIES: mp
+    // MODIFIES: a
     // EFFECTS: parses addBondToList from JSON object and adds it to MyPortfolio
-    private void addBondToList(Portfolio p, Internship b, JSONObject jsonObject) {
+    private void addInternshipToList(Application a, JSONObject jsonObject) throws DuplicateException {
         String name = jsonObject.getString("name");
-        Internship internship = new Internship(name, b.getDueDate(), b.getStatus());
-        p.addInternship(internship);
+        Student student = new Student("Alex", 1);
+        Internship internship = new Internship(name, "Due Date", "accepted", "Bachelors", "Second Year");
+        a.addInternship(student, internship);
     }
 }
 
  */
+

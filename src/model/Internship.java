@@ -34,4 +34,10 @@ public class Internship {
     public String getYearRequirement() {
         return yearRequirement;
     }
+
+    public void setStatus() {
+        //todo: changes status of application to something else
+    }
+
+
 }
