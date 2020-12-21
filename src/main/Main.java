@@ -1,7 +1,7 @@
 package main;
 
 import model.Internship;
-import model.Portfolio;
+import model.Application;
 
 import javax.swing.*;
 import java.util.ArrayList;
@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class Main {
     private static JButton button;
-    private static Portfolio portfolio;
+    private static Application application;
     private static Internship internship1;
     private static Internship internship2;
     private static Internship internship3;
