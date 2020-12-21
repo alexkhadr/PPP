@@ -16,15 +16,20 @@ public class Application {
         applications = new HashMap<>();
     }
 
+    //MODIFIES: this
+    //EFFECTS: adds an internship to internships
     public void addInternships(Internship i) {
         internships.add(i);
     }
 
+    //MODIFIES: this
+    //EFFECTS: adds a new student
     public void addStudent(Student s) {
         students.add(s);
     }
 
-
+    //MODIFIES: this
+    //EFFECTS: adds an internship to a student's application list
     public void addApplication(Student s, Internship i) throws DuplicateException {
         if (applications.containsKey(s) && !applications.get(s).contains(i)) {
             applications.get(s).add(i);
@@ -42,6 +47,8 @@ public class Application {
 //        }
     }
 
+    //MODIFIES: this
+    //EFFECTS: removes internship from student's application list
     public void removeInternship(Student s, Internship i) throws NotExistException {
         if (applications.containsKey(s) || applications.get(s).contains(i)) {
             applications.get(s).remove(i);
