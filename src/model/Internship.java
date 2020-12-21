@@ -14,4 +14,24 @@ public class Internship {
         this.educationRequirement = educationRequirement;
         this.yearRequirement = yearRequirement;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDueDate() {
+        return dueDate;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public String getEducationRequirement() {
+        return educationRequirement;
+    }
+
+    public String getYearRequirement() {
+        return yearRequirement;
+    }
 }

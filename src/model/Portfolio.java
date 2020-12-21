@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Portfolio {
     ArrayList<Internship> Internships;
 
-    public Portfolio(ArrayList<Internship> Internships) {
+    public Portfolio() {
         Internships = new ArrayList<>();
     }
 
