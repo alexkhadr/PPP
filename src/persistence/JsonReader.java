@@ -1,14 +1,6 @@
 package persistence;
 
-import model.Internship;
-
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.stream.Stream;
-
+/*
 import model.Portfolio;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -72,3 +64,5 @@ public class JsonReader {
         p.addInternship(internship);
     }
 }
+
+ */

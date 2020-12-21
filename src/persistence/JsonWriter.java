@@ -1,5 +1,5 @@
 package persistence;
-
+/*
 import model.Portfolio;
 import org.json.JSONObject;
 
@@ -44,3 +44,5 @@ public class JsonWriter {
         writer.print(json);
     }
 }
+
+ */
