@@ -25,7 +25,8 @@ public class Portfolio {
         }
     }
 
-    public ArrayList<Internship> viewInternships() {
+    //Getters and Setters
+    public ArrayList<Internship> getInternships() {
         return Internships;
     }
 
