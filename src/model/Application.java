@@ -16,7 +16,15 @@ public class Application {
         applications = new HashMap<>();
     }
 
-    //
+    public void addInternships(Internship i) {
+        internships.add(i);
+    }
+
+    public void addStudent(Student s) {
+        students.add(s);
+    }
+
+
     public void addApplication(Student s, Internship i) throws DuplicateException {
         if (applications.containsKey(s) && !applications.get(s).contains(i)) {
             applications.get(s).add(i);
@@ -27,7 +35,6 @@ public class Application {
         } else {
             throw new DuplicateException();
         }
-
 //        if (internships.contains(i)) {
 //            System.out.println("Internship is already added to Account");
 //        } else {
@@ -42,6 +49,7 @@ public class Application {
             System.out.println("Internship was not found in account");
             throw new NotExistException();
         }
+
 //        if (internships.contains(i)) {
 //            internships.remove(i);
 //        } else {
