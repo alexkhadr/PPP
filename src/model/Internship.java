@@ -1,17 +1,21 @@
 package model;
 
 public class Internship {
+
+    public enum Status {Accepted, Rejected, UnderReview}
+    public enum EducationRequirement {Diploma, Bachelors, Masters}
+
     String name;
     String dueDate;
-    String status;
-    String educationRequirement;
+    Status status;
+    EducationRequirement requirement;
     String yearRequirement;
 
-    public Internship(String name, String dueDate, String status, String educationRequirement, String yearRequirement) {
+    public Internship(String name, String dueDate, Status status, EducationRequirement requirement, String yearRequirement) {
         this.dueDate = dueDate;
         this.name = name;
         this.status = status;
-        this.educationRequirement = educationRequirement;
+        this.requirement = requirement;
         this.yearRequirement = yearRequirement;
     }
 
@@ -24,19 +28,19 @@ public class Internship {
     }
 
     public String getStatus() {
-        return status;
+        return String.valueOf(status);
     }
 
     public String getEducationRequirement() {
-        return educationRequirement;
+        return String.valueOf(requirement);
     }
 
     public String getYearRequirement() {
         return yearRequirement;
     }
 
-    public void setStatus() {
-        //todo: changes status of application to something else
+    public Status setStatus(Status s) {
+        return this.status = s;
     }
 
 

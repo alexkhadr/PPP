@@ -34,7 +34,7 @@ public class Application {
         if (applications.containsKey(s) && !applications.get(s).contains(i)) {
             applications.get(s).add(i);
         } else if (!applications.containsKey(s)) {
-            applications.put(s, internships);
+            applications.put(s, new ArrayList<Internship>());
             List<Internship> list = applications.get(s);
             list.add(i);
         } else {
